@@ -22,7 +22,7 @@ export default function Page() {
           href="/cabins"
           className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
         >
-          Explore luxurious cabins
+          Explore luxury cabins
         </Link>
       </div>
     </main>
