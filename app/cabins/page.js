@@ -1,6 +1,9 @@
 import { Suspense } from "react";
 import CabinList from "../_components/CabinList";
-import Loading from "./loading";
+import Spinner from "../_components/Spinner";
+
+//Revalidate data every one hour
+export const revalidate = 3600;
 
 export const metadata = {
   title: "Cabins",
@@ -21,7 +24,7 @@ export default function Page() {
         Welcome to paradise.
       </p>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Spinner />}>
         <CabinList />
       </Suspense>
     </div>
