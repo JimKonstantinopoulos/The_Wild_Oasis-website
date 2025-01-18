@@ -1,6 +1,7 @@
 "use client";
 
 import { useReservation } from "../context/ReservationContext";
+import LoginMessage from "./LoginMessage";
 
 function ReservationForm({ cabin, user }) {
   const { range } = useReservation();
@@ -8,7 +9,12 @@ function ReservationForm({ cabin, user }) {
   const { maxCapacity } = cabin;
 
   return (
-    <div className="scale-[1.01]">
+    <div className="scale-[1.01] relative">
+      {!user && (
+        <div className="absolute inset-0 backdrop-blur-sm bg-black/90 flex items-center justify-center">
+          <LoginMessage />
+        </div>
+      )}
       <div className="bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center">
         <p>Logged in as</p>
 
@@ -17,10 +23,10 @@ function ReservationForm({ cabin, user }) {
             // Important to display google profile images
             referrerPolicy="no-referrer"
             className="h-8 rounded-full"
-            src={user.image}
-            alt={user.name}
+            src={user?.image}
+            alt={user?.name}
           />
-          <p>{user.name}</p>
+          <p>{user?.name}</p>
         </div>
       </div>
 
