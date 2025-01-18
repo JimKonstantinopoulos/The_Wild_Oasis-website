@@ -11,7 +11,7 @@ function ReservationForm({ cabin, user }) {
   return (
     <div className="scale-[1.01] relative">
       {!user && (
-        <div className="absolute inset-0 backdrop-blur-sm bg-black/90 flex items-center justify-center">
+        <div className="absolute inset-0 backdrop-blur-sm bg-primary-900/90 flex items-center justify-center">
           <LoginMessage />
         </div>
       )}
