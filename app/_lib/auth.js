@@ -15,9 +15,15 @@ const authConfig = {
       return !!auth?.user;
     },
   },
+  pages: {
+    //Replace google's signin page with a custom one
+    signIn: "/login",
+  },
 };
 
 export const {
   auth,
+  signIn,
+  signOut,
   handlers: { GET, POST },
 } = NextAuth(authConfig);
