@@ -1,7 +1,6 @@
 import { auth } from "../_lib/auth";
 import { getBookedDatesByCabinId, getSettings } from "../_lib/data-service";
 import DateSelector from "./DateSelector";
-import LoginMessage from "./LoginMessage";
 import ReservationForm from "./ReservationForm";
 
 async function Reservation({ cabin }) {
