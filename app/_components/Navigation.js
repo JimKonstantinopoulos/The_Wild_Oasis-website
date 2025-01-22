@@ -34,6 +34,7 @@ export default async function Navigation() {
                 className="h-8 rounded-full"
                 src={session.user.image}
                 alt={session.user.name}
+                //Necessary property to correctly display gooles user's image
                 referrerPolicy="no-referrer"
               />
               <span>Guest area</span>
