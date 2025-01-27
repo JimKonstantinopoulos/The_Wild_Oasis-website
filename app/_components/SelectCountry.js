@@ -11,7 +11,7 @@ async function SelectCountry({ defaultCountry, name, id, className }) {
     <select
       name={name}
       id={id}
-      // Here we use a trick to encode BOTH the country name and the flag into the value. Then we split them up again later in the server action
+      // Here a trick is used to encode BOTH the country name and the flag into the value. Then, they are split again later in the server action
       defaultValue={`${defaultCountry}%${flag}`}
       className={className}
     >
