@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { updateProfile } from "../_lib/actions";
 import { useFormStatus } from "react-dom";
-import Spinner from "./Spinner";
 
 function UpdateProfileForm({ guest, children }) {
   const [count, setCount] = useState();
